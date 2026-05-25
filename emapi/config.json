@@ -1,0 +1,46 @@
+{
+    "agent": {
+        "service_qq": "1665938639",
+        "qq_group": "",
+        "tg_group_url": "",
+        "buy_url": [],
+        "download_url": []
+    },
+    "notice": [
+        {
+            "id": 1773558769690,
+            "content": "三网免挂免输码支付-免挂机|秒回调|资金无中转即时到账 mf.6ee.ee",
+            "link_url": "https:\/\/mf.6ee.ee",
+            "expire_time": 0
+        },
+        {
+            "id": 1773558787293,
+            "content": "官方推荐免备案服务器，2012年成立，香港本地商家稳定可靠。",
+            "link_url": "https:\/\/my.yecaoyun.com\/aff.php?aff=2312",
+            "expire_time": 0
+        }
+    ],
+    "ad": [
+        {
+            "id": 1773558803609,
+            "admin_id": 5,
+            "content": "宝塔linux面板企业版分发-畅享宝塔面板企业版功能",
+            "link_url": "https:\/\/baota.win\/buy.html",
+            "expire_time": 0
+        },
+        {
+            "id": 1773626500409,
+            "admin_id": 5,
+            "content": "广告位招租 联系QQ1665938639 15\/月",
+            "link_url": "",
+            "expire_time": 0
+        },
+        {
+            "id": 1773626501648,
+            "admin_id": 5,
+            "content": "广告位招租 联系QQ1665938639 15\/月",
+            "link_url": "",
+            "expire_time": 0
+        }
+    ]
+}
