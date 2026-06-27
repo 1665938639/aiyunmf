@@ -451,7 +451,7 @@
                     <a href="https://mf.aiyunwl.cn/User/" class="btn btn-primary"> 
                         <i class="mdi mdi-server"></i>旧系统（已停用）
                     </a>
-                    <a href="https://mpay.aiyunwl.cn/User/" class="btn btn-primary">
+                    <a href="https://mpay.aiyunwl.cn/" class="btn btn-primary">
                         <i class="mdi mdi-backup-restore"></i>备用系统
                     </a>
                     <!--<a href="https://mf.aiyunwl.cn/User/Doc.php" class="btn btn-primary">
@@ -483,7 +483,7 @@
         });
     </script>
     <!-- 在线客服 -->
-    <script src="https://yzf.qq.com/xv/web/static/chat_sdk/yzf_chat.min.js"></script>
+    <!--<script src="https://yzf.qq.com/xv/web/static/chat_sdk/yzf_chat.min.js"></script>
     <script>
     //参数说明
     //sign：公司渠道唯一标识，复制即可，无需改动
@@ -509,24 +509,86 @@
     </script>
     <!-- 屏蔽右键 -->
     <script type="text/javascript">
-		//禁用右键（防止右键查看源代码） 
-	    window.oncontextmenu=function(){return false;} 
-	    //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
-	    window.onkeydown = window.onkeyup = window.onkeypress = function () { 
-	        window.event.returnValue = false; 
-	        return false; 
-	    } 
-	    //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
-	    var h = window.innerHeight,w=window.innerWidth; 
-	    window.onresize = function () { 
-	        if (h!= window.innerHeight||w!=window.innerWidth){ 
-	            window.close(); 
-	            window.location = "about:blank"; 
-	        } 
-	    }
+        //禁用右键（防止右键查看源代码） 
+        window.oncontextmenu=function(){return false;} 
+        //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
+        window.onkeydown = window.onkeyup = window.onkeypress = function () { 
+            window.event.returnValue = false; 
+            return false; 
+        } 
+        //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+        var h = window.innerHeight,w=window.innerWidth; 
+        window.onresize = function () { 
+            if (h!= window.innerHeight||w!=window.innerWidth){ 
+                window.close(); 
+                window.location = "about:blank"; 
+            } 
+        }
     </script>
     <!--弹窗开始-->
 <!--<html><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1.0"><style>.notice-popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:99999;display:flex;justify-content:center;align-items:center}.popup-content{background:#fff;border-radius:12px;padding:30px;max-width:500px;width:90%;box-shadow:0 5px 20px rgba(0,0,0,0.1);text-align:center}.popup-title{font-size:24px;font-weight:700;margin-bottom:20px;color:#333}.popup-message{font-size:16px;line-height:1.6;color:#666;margin-bottom:25px}.popup-button{background:#1677ff;color:#fff;border:0;padding:12px 30px;border-radius:8px;font-size:16px;font-weight:500;cursor:pointer;transition:background .2s}.popup-button:hover{background:#1266d9}</style></head><body><div class=notice-popup><div class=popup-content><div class=popup-title>爱云码付五周年前瞻活动</div><div class=popup-message><p>所有套餐（体验套餐及永久套餐除外）进行永久降价，已开通用户将会进行补偿，我们将在8月4日前完成调整</p><br><h2>爱云码付感谢所有商户的大力支持</h2></div><button class=popup-button onclick="this.parentElement.parentElement.remove()">我知道了</button></div></div></body></html>
 <!--弹窗end-->
+<!-- 企业微信客服悬浮按钮 -->
+<style>
+    /* 客服按钮容器 - 固定在右下角 */
+    .wechat-service-btn {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: linear-gradient(45deg, #10b981, #059669); /* 使用你网站的 accent 绿色 */
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    /* 悬停效果 - 与现有按钮风格一致 */
+    .wechat-service-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
+    }
+
+    /* 图标样式 */
+    .wechat-service-btn i {
+        font-size: 1.4rem;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+        .wechat-service-btn {
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+        }
+        .wechat-service-btn span {
+            display: none; /* 手机端只显示图标，节省空间 */
+        }
+        .wechat-service-btn {
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+</style>
+
+<a href="https://work.weixin.qq.com/kfid/kfcad532e9a096562ae" 
+   target="_blank" 
+   class="wechat-service-btn" 
+   title="联系企业微信客服">
+    <i class="mdi mdi-wechat"></i>
+    <span>在线客服</span>
+</a>
 </body>
 </html>
